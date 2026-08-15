@@ -489,34 +489,158 @@
             </ul>
             <br>
             <h3>3. Online Application Form</h3>
-            <form action="https://formspree.io/f/xwvgjyan" method="POST">
-                <div class="form-group">
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname" required>
+            <p style="margin-bottom: 1.5rem; color: #555;">(All information must be filled in Block Letters only as per your S.S.L.C Marks Card.)</p>
+
+            <!-- Start Formspree Form Integration -->
+            <form action="https://api.staticforms.xyz/submit" method="POST" class="admission-form">
+             <input type="hidden" name="accessKey" value="sf_afd46baca4fc0ae07ca905be">
+">   
+                <!-- 1. Student's Details (from Image 2) -->
+                <fieldset style="border: 1px solid #ccc; padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; background-color: #fafafa;">
+                    <legend style="font-weight: bold; color: #003366; padding: 0 10px;">1. Candidate's Information</legend>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <div style="flex: 2; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">1. Candidate's Full Name (as in S.S.L.C Marks Card) <span style="color:red">*</span></label>
+                            <input type="text" name="Candidate Name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;" placeholder="FULL NAME">
+                        </div>
+                        <div style="flex: 1; min-width: 150px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">2. Date of Birth <span style="color:red">*</span></label>
+                            <input type="date" name="Date of Birth" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <div style="flex: 1; min-width: 150px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">3. Sex <span style="color:red">*</span></label>
+                            <div style="display: flex; gap: 1rem; padding: 0.8rem 0;">
+                                <label><input type="radio" name="Sex" value="Male" required> Male</label>
+                                <label><input type="radio" name="Sex" value="Female"> Female</label>
+                            </div>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">4. Aadhaar Card Number <span style="color:red">*</span></label>
+                            <input type="tel" name="Aadhaar Number" required pattern="[0-9]{12}" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;" placeholder="12-digit number">
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">5. Mobile Number (Candidate) <span style="color:red">*</span></label>
+                            <input type="tel" name="Contact Phone" required pattern="[0-9]{10}" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;" placeholder="10-digit Mobile Number">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 2. Family Details & Trade Selection (from Image 1 & 2) -->
+                <fieldset style="border: 1px solid #ccc; padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; background-color: #fafafa;">
+                    <legend style="font-weight: bold; color: #003366; padding: 0 10px;">2. Family & Course Selection</legend>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">6. Father's Name / Guardian Name <span style="color:red">*</span></label>
+                            <input type="text" name="Father Name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">7. Mother's Name <span style="color:red">*</span></label>
+                            <input type="text" name="Mother Name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">8. Category (SC/ST/C1/2A/3A/3B/GM) <span style="color:red">*</span></label>
+                            <select name="Category" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; background:white;">
+                                <option value="">-- Select Category --</option>
+                                <option value="GM">General Merit</option>
+                                <option value="SC">Scheduled Caste</option>
+                                <option value="ST">Scheduled Tribe</option>
+                                <option value="C1">Category-1</option>
+                                <option value="2A">2A</option>
+                                <option value="3A">3A</option>
+                                <option value="3B">3B</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">9. S.S.L.C. Total Marks obtained <span style="color:red">*</span></label>
+                            <input type="text" name="SSLC Marks obtained" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">10. First Choice of Trade (Course) <span style="color:red">*</span></label>
+                            <select name="Trade Choice 1" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; background:white;">
+                                <option value="">-- Select First Trade --</option>
+                                <option value="Electrical">Electrical (2 Years)</option>
+                                <option value="Fitter">Fitter (2 Years)</option>
+                                <option value="MMV">MMV (2 Years)</option>
+                                <option value="Mechanic Diesel">Mechanic Diesel (1 Year)</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">11. Second Choice of Trade (Course)</label>
+                            <select name="Trade Choice 2" style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; background:white;">
+                                <option value="">-- Select Second Trade --</option>
+                                <option value="Electrical">Electrical (2 Years)</option>
+                                <option value="Fitter">Fitter (2 Years)</option>
+                                <option value="MMV">MMV (2 Years)</option>
+                                <option value="Mechanic Diesel">Mechanic Diesel (1 Year)</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 3. Declaration & Required Documents (from Image 1 & Checklist) -->
+                <fieldset style="border: 1px solid #ccc; padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; background-color: #fafafa;">
+                    <legend style="font-weight: bold; color: #003366; padding: 0 10px;">3. Documents & Declaration</legend>
+                    <p style="margin-top: 0; color: #555;">Please confirm you will submit clear copies of these documents upon request:</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                        <label style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" name="check_photo" required> Recent Passport Size Photograph <span style="color:red">*</span></label>
+                        <label style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" name="check_sslc" required> SSLC / 10th Marks Card <span style="color:red">*</span></label>
+                        <label style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" name="check_aadhar" required> Aadhaar Card Copy <span style="color:red">*</span></label>
+                        <label style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" name="check_caste"> Caste / Income Certificate (if applicable)</label>
+                        <label style="display: flex; align-items: center; gap: 8px;"><input type="checkbox" name="original_confirmation" required> I can produce all original documents for verification at the institute. <span style="color:red">*</span></label>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <label style="display: flex; align-items: start; gap: 8px;">
+                            <input type="checkbox" name="final_declaration" required style="margin-top: 4px;">
+                            <span>I hereby declare that all the information provided above is true and correct to the best of my knowledge and belief. I understand that any false information may lead to rejection of this application. <span style="color:red">*</span></span>
+                        </label>
+<!-- Start Document Upload Section -->
+                    <div style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1.5rem;">
+                        <p style="margin-top: 0; color: #003366; font-weight: bold;">Upload Clear Copies (PDF, JPG, or PNG max 5MB):</p>
+                        
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                            <div style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Recent Passport Size Photograph</label>
+                                <input type="file" name="Attachment_Photo" accept=".jpg,.jpeg,.png" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; background: #eee; cursor: pointer;">
+                            </div>
+                            <div style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">S.S.L.C. / 10th Marks Card</label>
+                                <input type="file" name="Attachment_SSLC" accept=".pdf,.jpg,.jpeg,.png" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; background: #eee; cursor: pointer;">
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Aadhaar Card Copy</label>
+                                <input type="file" name="Attachment_Aadhaar" accept=".pdf,.jpg,.jpeg,.png" required style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; background: #eee; cursor: pointer;">
+                            </div>
+                            <div style="flex: 1; min-width: 250px; margin-bottom: 1rem;">
+                                <label style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Transfer Certificate (TC) (Optional)</label>
+                                <input type="file" name="Attachment_TC" accept=".pdf,.jpg,.jpeg,.png" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; background: #eee; cursor: pointer;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Document Upload Section -->
+                    </div>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <div style="text-align: center;">
+                    <button type="submit" style="padding: 1rem 2.5rem; background-color: #003366; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: transform 0.1s;">
+                        Submit Online Application
+                    </button>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="trade">Preferred Trade:</label>
-                    <select id="trade" name="trade" required>
-                        <option value="">Select a Trade</option>
-                        <option value="electrician">Electrician</option>
-                        <option value="fitter">Fitter</option>
-                        <option value="welder">Welder</option>
-                        <option value="mmv">Mechanic Motor Vehicle (MMV)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Additional Details / Message:</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit Application</button>
+
             </form>
         </div>
 
@@ -623,27 +747,39 @@
         <p>&copy; 2026 St. Mary's Industrial Training Institute. All Rights Reserved.</p>
     </footer>
 
+    <!-- JAVASCRIPT FOR PAGE NAVIGATION -->
     <script>
-        function openPage(pageId, btnElement) {
+        function openPage(pageId, elmnt) {
             // Hide all pages
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
-
+            var i;
+            var x = document.getElementsByClassName("page-content");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            
             // Remove active status from all navigation buttons
-            const buttons = document.querySelectorAll('.nav-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Show selected page and mark button as active
-            const targetPage = document.getElementById(pageId);
-            if (targetPage) {
-                targetPage.classList.add('active');
+            var buttons = document.querySelectorAll('nav button');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            
+            // Show the current page and mark the button as active
+            document.getElementById(pageId).style.display = "block";
+            
+            // If elmnt is passed (from the click), set active class
+            if (elmnt) {
+                elmnt.classList.add('active');
+            } else {
+                // If not (like on initial load), find the button manually
+                const nav = document.querySelector('nav');
+                const clickedButton = nav.querySelector(`button[onclick*="'${pageId}'"]`);
+                if (clickedButton) {
+                    clickedButton.classList.add('active');
+                }
             }
-            if (btnElement) {
-                btnElement.classList.add('active');
-            }
-
-            // Scroll smoothly back to top when switching pages
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Scroll back to top when switching pages
+            window.scrollTo({ top: 0 });
         }
     </script>
 
